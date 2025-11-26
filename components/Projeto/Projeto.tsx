@@ -1,12 +1,11 @@
 
 interface ProjetoProps {
-  nome: string; 
-  url: string; 
-  
+    readonly nome: string; 
+    readonly url: string; 
 }
 
 
-export function Projeto({ nome, url } : ProjetoProps) {
+export function Projeto({ nome, url } : Readonly<ProjetoProps>) {
     return (
         <div className="p-4 border rounded-xl shadow-sm my-2">
             <p>

@@ -5,8 +5,9 @@ interface CaracteristicaPageProps {
   params: { caracteristica: string };
 }
 
-export default function CaracteristicaPage({ params }: CaracteristicaPageProps) {
-  const caracteristica = decodeURIComponent(params.caracteristica);
+export default async function CaracteristicaPage({ params }: CaracteristicaPageProps) {
+  const { caracteristica: raw } = await params;
+  const caracteristica = decodeURIComponent(raw);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-6">

@@ -11,7 +11,7 @@ export default function Header() {
                 <Link href="/" className="hover:underline">HomePage</Link>
                 <Link href="/projetos" className="hover:underline">ProjetosPage</Link>
                 <Link href="/sobre" className="hover:underline">Sobre</Link>
-                <Link href="/tecnologias" className="hover:underline">Tecnologias</Link>
+                <Link href="/Tecnologias" className="hover:underline">Tecnologias</Link>
                 <Link href="/caracteristicas" className="hover:underline">Características</Link>
             </nav>
         </header>
