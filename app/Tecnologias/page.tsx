@@ -34,11 +34,11 @@ let coonta = 0
             />
           </Link>
         ))}
-        <p className="bla">Adicionando gostos: {conta}</p>
+        <p className=" text-black">Adicionando gostos:  {conta}</p>
         <button 
         className="bg-black   p-3 hover:text-black hover:bg-white   rounded-xl"
          onClick={() => setConta(conta+1)}>
-          Gosto++
+         Gosto++
         </button>
 
         
