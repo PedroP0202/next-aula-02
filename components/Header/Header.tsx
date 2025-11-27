@@ -13,6 +13,7 @@ export default function Header() {
                 <Link href="/sobre" className="hover:underline">Sobre</Link>
                 <Link href="/Tecnologias" className="hover:underline">Tecnologias</Link>
                 <Link href="/caracteristicas" className="hover:underline">Características</Link>
+                <Link href="/contador" className="hover:underline">Contador</Link>
             </nav>
         </header>
     )
