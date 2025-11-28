@@ -32,7 +32,7 @@ export default function RootLayout({ children,}: Readonly<{children: React.React
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased
           
-          min-h-screen flex flex-col items-center justify-start p-20 gap-2
+          min-h-screen flex flex-col items-center justify-start p-20 gap-2 
           `} 
       >
         <Header />
