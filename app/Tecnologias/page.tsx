@@ -6,17 +6,19 @@ import { useEffect, useState } from "react";
 
 export default function TecnologiasPage() {
 const [conta, setConta] = useState(() => {
-  const contaStorad = localStorage.getItem("conta")
-  return contaStorad ? Number(contaStorad) : 0
-})
+  if (typeof window === 'undefined') return 0;
+  const contaStorad = window.localStorage.getItem("conta");
+  return contaStorad ? Number(contaStorad) : 0;
+});
 
 function aumentarConta(){
   setConta(conta+1)
 }
 
 useEffect(()=>{
-    console.log("Conta ++", conta)
-    localStorage.setItem('conta',`${conta}`)
+  if (typeof window === 'undefined') return;
+  console.log("Conta ++", conta)
+  window.localStorage.setItem('conta',`${conta}`)
 },[conta])
 
 let coonta = 0

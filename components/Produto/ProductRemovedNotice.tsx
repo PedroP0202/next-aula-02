@@ -10,8 +10,8 @@ export default function ProductRemovedNotice({ id }: Props) {
   const router = useRouter();
 
   useEffect(() => {
-    if (globalThis.window === undefined) return;
-    setRemoved(localStorage.getItem(`prod_removed_${id}`) === 'true');
+    if (typeof window === 'undefined') return;
+    setRemoved(window.localStorage.getItem(`prod_removed_${id}`) === 'true');
   }, [id]);
 
   if (!removed) return null;

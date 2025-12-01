@@ -15,8 +15,8 @@ export default function ProductCard({ id, title, image, category }: ProdutoCardP
   const [featured, setFeatured] = useState(false);
 
   useEffect(() => {
-    if (globalThis.window === undefined) return;
-    setFeatured(localStorage.getItem(`prod_featured_${id}`) === 'true');
+    if (typeof window === 'undefined') return;
+    setFeatured(window.localStorage.getItem(`prod_featured_${id}`) === 'true');
   }, [id]);
   return (
     <Link href={`/produtos/${id}`} className="block w-60">

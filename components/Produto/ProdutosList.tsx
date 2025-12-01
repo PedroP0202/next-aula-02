@@ -10,7 +10,8 @@ export default function ProdutosList() {
   const [produtos, setProdutos] = useState<Produto[]>(() => [...produtosData]);
 
   useEffect(() => {
-    setProdutos(prev => prev.filter(p => localStorage.getItem(`prod_removed_${p.id}`) !== 'true'));
+    if (typeof window === 'undefined') return;
+    setProdutos(prev => prev.filter(p => window.localStorage.getItem(`prod_removed_${p.id}`) !== 'true'));
   }, []);
 
   return (

@@ -16,6 +16,7 @@ export default function ProdutoPage({ params }: ProdutoPageProps) {
       </main>
     );
   }
+  
 
   return (
     <main className="p-6">

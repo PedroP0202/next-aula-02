@@ -15,7 +15,8 @@ export default function ContadorPersonalizado({ title }: Props) {
   });
 
   useEffect(() => {
-    localStorage.setItem(key, String(likes));
+    if (typeof window === 'undefined') return;
+    window.localStorage.setItem(key, String(likes));
   }, [likes, key]);
 
   function handleClick() {
