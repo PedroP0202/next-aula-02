@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import ContadorPersonalizado from "@/components/ContadorPersonalizado/ContadorPersonalizado";
 
 interface TecnologiaCardProps {
   readonly title: string;
@@ -12,7 +14,9 @@ export default function TecnologiaCard(props : TecnologiaCardProps) {
      <h2 className=" text-black"  >{props.title}</h2>
      <h3 className="  text-black"  >{props.image}</h3>
       <h4 className=" p-3 text-center text-black font-semibold">{props.description}</h4>
-      
+      <div className="mt-3">
+        <ContadorPersonalizado title={props.title} />
+      </div>
     </div>
   );
 }

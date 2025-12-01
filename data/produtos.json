@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "title": "Notebook X",
+    "description": "Notebook potente para programação e jogos.",
+    "image": "/images/notebook.svg",
+    "category": "Eletrônicos"
+  },
+  {
+    "id": "2",
+    "title": "Teclado Mecânico",
+    "description": "Teclado mecânico com switches táteis.",
+    "image": "/images/teclado.svg",
+    "category": "Acessórios"
+  },
+  {
+    "id": "3",
+    "title": "Mouse Gamer",
+    "description": "Mouse com alta precisão e iluminação RGB.",
+    "image": "/images/mouse.svg",
+    "category": "Acessórios"
+  },
+  {
+    "id": "4",
+    "title": "Smartphone Z",
+    "description": "Smartphone com câmera avançada e tela AMOLED.",
+    "image": "/images/phone.svg",
+    "category": "Eletrônicos"
+  }
+]

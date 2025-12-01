@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import Header from '@/components/Header/Header'
+import Relogio from '@/components/Relogio/Relogio';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,11 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children,}: Readonly<{children: React.ReactNode;}>) {
 
-  // Variaveis
-
   const data = new Date()
-
-  // Rendering
 
   return (
     <html lang="en">
@@ -40,7 +36,12 @@ export default function RootLayout({ children,}: Readonly<{children: React.React
                           w-full md:w-2/3 lg:w-1/2 xl:w-1/3">
           {children}
         </main>
-        <footer>DIW, {data.getFullYear()}</footer>
+        <footer className="w-full mt-6 flex items-center justify-between text-sm text-gray-700">
+          <div>DIW, {data.getFullYear()}</div>
+          <div>
+            <Relogio />
+          </div>
+        </footer>
       </body>
     </html>
   );

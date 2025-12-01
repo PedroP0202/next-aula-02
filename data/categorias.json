@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Eletrônicos",
+    "logo": "/images/eletronicos.svg",
+    "description": "Dispositivos eletrônicos e portáteis"
+  },
+  {
+    "title": "Acessórios",
+    "logo": "/images/acessorios.svg",
+    "description": "Periféricos e complementos"
+  }
+]
