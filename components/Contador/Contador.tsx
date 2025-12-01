@@ -3,27 +3,34 @@
 import React, { useEffect, useState } from "react";
 export default function Contador() {
   const [valor, setValor] = useState<number>(() => {
-    const v = localStorage.getItem("contador_valor");
+    // Avoid accessing localStorage during SSR / build time — only read on client
+    if (typeof window === "undefined") return 0;
+    const v = window.localStorage.getItem("contador_valor");
     return v ? Number(v) : 0;
   });
 
   const [historico, setHistorico] = useState<number[]>(() => {
-    const h = localStorage.getItem("contador_historico");
+    if (typeof window === "undefined") return [];
+    const h = window.localStorage.getItem("contador_historico");
     return h ? (JSON.parse(h) as number[]) : [];
   });
   useEffect(() => {
-    const v = localStorage.getItem("contador_valor");
-    const h = localStorage.getItem("contador_historico");
+    // Only run on the client
+    if (typeof window === "undefined") return;
+    const v = window.localStorage.getItem("contador_valor");
+    const h = window.localStorage.getItem("contador_historico");
     if (v) setValor(Number(v));
     if (h) setHistorico(JSON.parse(h));
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("contador_valor", String(valor));
+    if (typeof window === "undefined") return;
+    window.localStorage.setItem("contador_valor", String(valor));
   }, [valor]);
 
   useEffect(() => {
-    localStorage.setItem("contador_historico", JSON.stringify(historico));
+    if (typeof window === "undefined") return;
+    window.localStorage.setItem("contador_historico", JSON.stringify(historico));
   }, [historico]);
 
     function aumentar() {
