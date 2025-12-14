@@ -33,7 +33,7 @@ export default function RootLayout({ children,}: Readonly<{children: React.React
       >
         <Header />
         <main className="bg-blue-200 p-5 rounded-2xl min-h-[70vh] 
-                          w-full md:w-2/3 lg:w-1/2 xl:w-1/3">
+                          w-full md:w-4/5 lg:w-3/4 xl:w-2/3">
           {children}
         </main>
         <footer className="w-full mt-6 flex items-center justify-between text-sm text-gray-700">
