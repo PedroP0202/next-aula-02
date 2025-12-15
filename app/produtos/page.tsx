@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import { Product } from '@/models/interfaces'
 import ProdutoCard from '@/components/ProdutoCard/ProdutoCard'
 import { Skeleton } from "@/components/ui/skeleton"
+import Spinner from "@/components/ui/Spinner"
 
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
@@ -127,8 +128,8 @@ export default function ProductPage() {
 
       <h2 className="text-xl font-bold mb-4">Produtos Disponíveis</h2>
       {showLoading ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-           {[...Array(4)].map((_, i) => <Skeleton key={i} className="h-48 w-full rounded-xl" />)}
+        <div className="flex justify-center items-center h-64">
+          <Spinner />
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
