@@ -111,7 +111,7 @@ export default function ProductPage() {
           placeholder="Pesquisar produto..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="flex-grow p-2 border border-gray-300 rounded-md shadow-sm"
+          className="flex-grow p-2 bg-white border border-gray-300 rounded-md shadow-sm"
         />
         <select 
             value={sortOrder}
